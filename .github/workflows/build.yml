@@ -40,11 +40,11 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get update && sudo apt-get install rdfind gcc make git unzip wget xz-utils bc gperf zip unzip g++ xsltproc xfonts-utils patchutils lzop libxml-parser-perl libparse-yapp-perl rename jq
       - name: Download the CoreELEC
-        run: git clone https://github.com/CoreELEC/CoreELEC
+        run: git clone https://github.com/zainkamal95/CoreELEC
       - name: CoreELEC release tags checkout
         run: |
           cd CoreELEC
-          git checkout 21.2-Omega
+          git checkout coreelec-21
       - name: adding sources for download errors...
         run: |
           if [ -d ${{ github.workspace }}/.github/sources ] && [ ! -d ${{ github.workspace }}/CoreELEC/sources ]; then
